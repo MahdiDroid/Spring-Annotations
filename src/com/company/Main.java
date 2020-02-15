@@ -2,7 +2,7 @@ package com.company;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class AnnotationApp {
+public class Main {
 
     public static void main(String[] args) {
 	// write your code here
@@ -10,7 +10,7 @@ public class AnnotationApp {
 
         // read spring config file
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext");
+                new ClassPathXmlApplicationContext("applicationContext.xml");
 
         //get the bean from spring container
         ICoach theCoach = context.getBean("tennisCoach",ICoach.class);
