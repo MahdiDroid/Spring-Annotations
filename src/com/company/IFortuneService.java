@@ -1,5 +1,5 @@
 package com.company;
 
-public interface FortuneService {
+public interface IFortuneService {
      String getFortune();
 }

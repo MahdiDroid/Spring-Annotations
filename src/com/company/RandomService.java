@@ -3,10 +3,10 @@ package com.company;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HappyFortuneService implements IFortuneService {
+public class RandomService implements IFortuneService{
 
     @Override
     public String getFortune() {
-        return "Today is your lucky day";
+        return null;
     }
 }

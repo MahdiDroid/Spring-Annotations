@@ -6,17 +6,11 @@ import org.springframework.stereotype.Component;
 
 @Component()   //bean Id  default bean Id is classname  start with lower case.
 public class TennisCoach implements ICoach {
-
-    private FortuneService fortuneService;
-
     @Autowired
-    public TennisCoach(FortuneService fortuneService) {
-        this.fortuneService = fortuneService;
-    }
+    private IFortuneService fortuneService;
 
-    @Override
-    public String getDailyFortune() {
-        return fortuneService.getFortune()   ;
+    public void  TennisCoach() {
+        System.out.println(">> inside default constructor");
     }
 
     @Override
@@ -24,4 +18,25 @@ public class TennisCoach implements ICoach {
 
         return "practice your backend volley";
     }
+    @Override
+    public String getDailyFortune() {
+        return fortuneService.getFortune()   ;
+    }
+
+
+//    @Autowired
+//    public TennisCoach(FortuneService fortuneService) {
+//        this.fortuneService = fortuneService;
+//    }
+
+
+//    @Autowired
+//    public void setFortuneService(FortuneService fortuneService) {
+//        System.out.println(">> inside setFortune");
+//        this.fortuneService = fortuneService;
+//    }
+
+
+
+
 }
