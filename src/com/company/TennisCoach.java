@@ -2,11 +2,16 @@ package com.company;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component()   //bean Id  default bean Id is classname  start with lower case.
+@Component()  //bean Id  default bean Id is classname  start with lower case.
+@Scope("Singeliton")
 public class TennisCoach implements ICoach {
+
     @Autowired
+    @Qualifier("randomFortuneService")
     private IFortuneService fortuneService;
 
     public void  TennisCoach() {
