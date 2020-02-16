@@ -16,8 +16,10 @@ public class Main {
         ICoach theCoach = context.getBean("tennisCoach",ICoach.class);
 
 
+
         //call method
         System.out.println(theCoach.GetDailyWorkout());
+        System.out.println(theCoach.getDailyFortune());
 
         //close
         context.close();
