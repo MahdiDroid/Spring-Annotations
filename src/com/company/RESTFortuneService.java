@@ -1,4 +1,11 @@
 package com.company;
 
-public class RESTFortuneService {
+import org.springframework.stereotype.Component;
+
+@Component
+public class RESTFortuneService implements IFortuneService {
+    @Override
+    public String getFortune() {
+        return null;
+    }
 }
