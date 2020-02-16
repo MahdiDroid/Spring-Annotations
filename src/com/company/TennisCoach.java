@@ -1,4 +1,6 @@
 package com.company;
+//import javax.annotation;
+//import javax.annotation;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +9,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component()  //bean Id  default bean Id is classname  start with lower case.
-@Scope("Singeliton")
+//@Scope("prototype")
 public class TennisCoach implements ICoach {
 
     @Autowired
@@ -27,6 +29,16 @@ public class TennisCoach implements ICoach {
     public String getDailyFortune() {
         return fortuneService.getFortune()   ;
     }
+//    @PostConstruct
+    public void doMyStartuostuff(){
+        System.out.println("before initializing method");
+    }
+
+//    @PreDestroy
+    public void doSomecleanUpStuff(){
+        System.out.println("cleaning stuff method");
+    }
+
 
 
 //    @Autowired
